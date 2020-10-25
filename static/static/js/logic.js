@@ -33,22 +33,22 @@ d3.csv("static/data/merged_house_data.csv").then(function(data) {
 
         var color = "";
         if (data[i].median<= 200000) {
-          color = "#4292c6";
+          color = "#41b6c4";
         }
         else if (data[i].median<= 300000) {
-          color = "#4292c6";
+          color = "#41b6c4";
         }
         else if (data[i].median<= 400000) {
-            color = "#2171b5";
+            color = "#41b6c4";
           }
         else if (data[i].median<= 500000) {
-          color = "#2171b5";
+          color = "#1d91c0";
         }
         else if (data[i].median<= 600000) {
-            color = "#084594";
+            color = "#225ea8";
           }
         else {
-          color = "#084594";
+          color = "#0c2c84";
         }
         
         var houseLocs = [data[i].lat,data[i].lon]
@@ -63,8 +63,8 @@ d3.csv("static/data/merged_house_data.csv").then(function(data) {
           fillColor: color,
           // Adjust radius
           radius: data[i].median * 0.003,
-        }).bindPopup("<h5>Zip Code: <b>" + data[i].RegionName + "</b><h/5><h4>Median House Value"+
-         "<h/4><h5>Median 2 Bedroom: $"+ data[i].median2 + "<h/5><h5>Median 3 Bedroom: $"+ data[i].median3 + "<h/5><h5>Median 4 Bedroom: $"+ data[i].median4 + "<h/5><h5>Median 5 Bedroom: $"+ data[i].median5 + "<h/5>").addTo(myMap2);
+        }).bindPopup("<h5>Zip Code: <b>" + data[i].RegionName +
+         "<h4>Median 2 Bedroom: $"+ data[i].median2 + "<h/4><h4>Median 3 Bedroom: $"+ data[i].median3 + "<h/4><h4>Median 4 Bedroom: $"+ data[i].median4 + "<h/4><h4>Median 5 Bedroom: $"+ data[i].median5 + "<h/3>").addTo(myMap2);
       }
     });
 
