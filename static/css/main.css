@@ -2731,7 +2731,7 @@
 		line-height: 3.25em;
 		position: absolute;
 		text-align: right;
-		top: 4em;
+		top: 2em;
 		width: 100%;
 		z-index: 10001;
 	}
@@ -2752,7 +2752,7 @@
 			padding: 0;
 			position: absolute;
 			top: 0;
-			font-size: 1em;
+			font-size: 2em;
 		}
 
 		#header a {
@@ -2762,9 +2762,9 @@
 			transition: color 0.2s ease-in-out;
 			display: inline-block;
 			padding: 0 0.75em;
-			color: inherit;
+			color: black;
 			text-decoration: none;
-			font-size: .8em;
+			font-size: 1.3em;
 		}
 
 			#header a:hover {
@@ -2936,21 +2936,12 @@
 		padding: 12em 0 10em 0;
 		background-image: url('../images/banner.jpg');
 		background-size: cover;
-		background-position: top;
-		background-attachment: fixed;
+		background-position: center;
+		background-attachment: scroll;
 		background-repeat: no-repeat;
 		text-align: center;
 		border-top: 0.5em solid #5385c1;
 	}
-
-		#banner h1 {
-			font-size: 3.5em;
-			font-weight: 100;
-			color: #fff;
-			line-height: 1em;
-			margin: 0 0 0.5em 0;
-			padding: 0;
-		}
 
 		#banner p {
 			font-size: 1em;
@@ -3064,4 +3055,8 @@
 			text-align: center;
 		}
 
+	}
+
+	.tableauPlaceholder {
+		margin: auto;
 	}
