@@ -145,9 +145,9 @@ function updatePlotly() {
 
         // Define the plot layout
         var layout = {
-            title: "Median Home Value Over Time",
+            title: "Mean Home Value Over Time",
             xaxis: { title: "Year" },
-            yaxis: {title: "Median Home Value"}
+            yaxis: {title: "Mean Home Value"}
         };
 
         // Plot the chart to a div tag with id "bar"
