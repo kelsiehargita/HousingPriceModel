@@ -1,26 +1,4 @@
-var file = "/static/data/house_data.csv";
 
-// variable counters
-var OneBed = 0;
-var TwoBed = 0;
-var ThreeBed = 0;
-var FourBed = 0;
-var FiveBed = 0;
-
-
-// function to read in data
-d3.csv(file,function (data) {
-    console.log(data);
-    for (var i=0; i<data.length;i++) {
-        
-        if (data[i]["# of bedrooms"] === "1") {OneBed++}
-        if (data[i]["# of bedrooms"] === "2") {TwoBed++}
-        if (data[i]["# of bedrooms"] === "3") {ThreeBed++}
-        if (data[i]["# of bedrooms"] === "4") {FourBed++}
-        if (data[i]["# of bedrooms"] === "5") {FiveBed++}
-    }
-
-    console.log(OneBed)
 
 const CHART = document.getElementById("myChart");
 Chart.defaults.scale.ticks.beginAtZero = true;
@@ -31,11 +9,17 @@ var myRadarChart = new Chart(CHART, {
         labels: ["One Bedroom", "Two Bedrooms", "Three Bedrooms", "Four Bedrooms", "Five Bedrooms"],
         datasets: [
             {
-                label: 'Room Count of Homes Sold',
-                bacgroundColor: '#00ff00',
+                label: '2010 Avg Price',
+                bacgroundColor: 'rgba(00,225,00,0.1)',
                 borderColor: '#00ff00',
                 borderWidth: 2,
-                data: [OneBed, TwoBed, ThreeBed, FourBed, FiveBed]
+                data: [96728, 82520, 114207, 165190, 229899]
+            },{
+                label: '2020 Avg Price',
+                bacgroundColor: 'rgba(225,22500,0.1)',
+                borderColor: '#ffff00',
+                borderWidth: 2,
+                data: [131974, 114750, 162899, 226149, 308727]
             }
         ]
     
@@ -44,4 +28,4 @@ var myRadarChart = new Chart(CHART, {
 
 });
 
-})
+
